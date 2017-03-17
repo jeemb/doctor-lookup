@@ -26,6 +26,8 @@ This app explores a new concept in my learning: "API integration" with JavaScrip
 ## Setup/Installation Requirements
 
 * Clone this repository
+* Open terminal and navigate to project root level
+* Run `npm install` and `bower install`
 * Open index.html file in browser
 
 ## Known Bugs

@@ -1,0 +1,21 @@
+{
+  "name": "doctor-search",
+  "description": "#### API Integration JavaScript Project 4.17.2017",
+  "main": "index.js",
+  "authors": [
+    "Jennifer Beem <jenniferbeem@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.0",
+    "bootstrap": "^3.3.7"
+  }
+}
