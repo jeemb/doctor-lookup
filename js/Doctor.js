@@ -10,7 +10,7 @@ Doctor.prototype.searchSymptom = function(symptom, callback) {
   .then(function(response) {
     console.log(response);
     var doctor_one = response.data[0].profile.first_name;
-    callback(symptom, doctor_one);
+    callback(symptom, response);
     // $('.show_doctors').append("<ul>");
     // for (var i = 0; i < response.profile.length; i++) {
     //   $('.show_doctors').append("<li>" + response.profile[i].first_name + "</li>");

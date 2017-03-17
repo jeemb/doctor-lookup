@@ -1,7 +1,12 @@
 var Doctor = require('./../js/Doctor.js').doctorModule;
 
-var displayDoctors = function(symptom, doctor) {
-  $('.show_doctors').text("The best doctor for " + symptom + "is" + doctor);
+var displayDoctors = function(symptom, response) {
+  $('.show_doctors').append("<ul>");
+  for (var i = 0; i < response.data.length; i++) {
+    $('.show_doctors').append("<li>" + response.data[i].profile.first_name + "</li>");
+  }
+    $('.show_doctors').append("</ul>");
+  // "The best doctor for " + symptom + "is" + doctor);
 };
 
 $(document).ready(function() {
