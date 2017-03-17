@@ -1,12 +1,12 @@
 var gulp = require('gulp');
-var concat = require('gulp-concat');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var utilities = require('gulp-util');
-var buildProduction = utilities.env.production;
 var del = require('del');
 var jshint = require('gulp-jshint');
+var buildProduction = utilities.env.production;
 var lib = require('bower-files')({
   "overrides":{
     "bootstrap" : {
@@ -19,6 +19,19 @@ var lib = require('bower-files')({
   }
 });
 var browserSync = require('browser-sync').create();
+
+gulp.task('jsBrowserify', function() {
+  return browserify({entries: ['./js/doctor-interface.js'] })
+  .bundle()
+  .pipe(source('app.js'))
+  .pipe(gulp.dest('./build/js'));
+});
+
+gulp.task('jshint', function(){
+  return gulp.src(['js/*.js'])
+  .pipe(jshint())
+  .pipe(jshint.reporter('default'));
+});
 
 gulp.task('concatInterface', function() {
   return gulp.src(['./js/*-interface.js'])
@@ -60,11 +73,6 @@ gulp.task("clean", function(){
   return del(['build', 'tmp']);
 });
 
-gulp.task('jshint', function(){
-  return gulp.src(['js/*.js'])
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
-});
 
 gulp.task('bowerJS', function () {
   return gulp.src(lib.ext('js').files)
