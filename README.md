@@ -18,10 +18,11 @@ This app explores a new concept in my learning: "API integration" with JavaScrip
 
 2. Specifications
 |Behavior|Example Input|Example Output|
-|User inputs medical symptom|"toothache"|Doctor Name/info|
+|--------|-------------|--------------|
+|User inputs medical symptom and doctor information is displayed|"toothache"|Doctor Name/info|
 
 3. UX/UI
- * Use Sass/Boostrap to style
+ * Use Bootstrap to style
 
 ## Setup/Installation Requirements
 
