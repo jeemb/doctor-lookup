@@ -5,7 +5,7 @@ var displayDoctors = function(symptom, response) {
   for (var i = 0; i < response.data.length; i++) {
     $('.show_doctors').append("<li> Dr. " + response.data[i].profile.last_name + "</li>");
   }
-    $('.show_doctors').append("</ul>");
+  $('.show_doctors').append("</ul>");
 };
 
 $(document).ready(function() {
