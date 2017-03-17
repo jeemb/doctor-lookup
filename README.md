@@ -17,9 +17,10 @@ This app explores a new concept in my learning: "API integration" with JavaScrip
   * Exports to link API key to second page
 
 2. Specifications
-|Behavior|Example Input|Example Output|
-|--------|-------------|--------------|
-|User inputs medical symptom and doctor information is displayed|"toothache"|Doctor Name/info|
+
+* Behavior: User inputs medical symptom and doctor information is displayed.
+* Example Input: "toothache"
+* Example Output: Doctor Name/info
 
 3. UX/UI
  * Use Bootstrap to style
